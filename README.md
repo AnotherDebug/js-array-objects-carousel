@@ -21,3 +21,4 @@ Al click della thumb cambia l’immagine attiva
 2. Posso utilizzare un ciclo for of oppure un for Each per iterare gli oggetti;
 3. Salvo in tre variabili immagine, titolo e testo richiamando l'oggetto stesso e tramite la dot notation richiamo la chiave che mi restituirà il valore;
 4. tramite template literals, inserisco la stringa che stampa ad ogni iterazione le immagini e i dati richiesti;
+5. Aggiungo e tolgo opportunamente la classe hide da titolo e testo;
