@@ -106,17 +106,17 @@ setTimeout(function() {
   clearInterval(startSlide);
 }, 4000);
 
-let counter = 0;
+  setTimeout(function() {
+    const backSlide = setInterval(backwardClick, 1000); 
+      setTimeout(function(){
+        clearInterval(backSlide);
+      }, 4000);  
+   }, 4100);
 
+let counter = 0;
 
 buttonRightRef.addEventListener("click", forwardClick);
 buttonLeftRef.addEventListener("click", backwardClick);
-
-
-
-
-
-  
 
 function forwardClick() {
 
