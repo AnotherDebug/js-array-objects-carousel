@@ -35,6 +35,12 @@
     display: flex;
 }
 
+
+/************************************************
+    SITE SECTIONS
+ ************************************************/
+
+
 .slider {
     height: 100%;
     position: relative;
@@ -43,6 +49,7 @@
 .items-slider {
     width: 80%;
    height: 100%;
+   position: relative;
 }
 
 .items-slider img {
@@ -52,6 +59,15 @@
    object-position: 100% 30%;
 }
 
+.items-slider .info {
+    position: absolute;
+    text-align: right;
+    color: white;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    margin-left: 30px;
+}
 
 .items-thumbs {
     flex-direction: column;
@@ -102,6 +118,3 @@ border: 2px solid white;
     background-color: rgba(255, 255, 255, 0.735);
 }
 
-/************************************************
-    SITE SECTIONS
- ************************************************/
