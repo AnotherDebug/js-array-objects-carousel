@@ -18,7 +18,7 @@
 2. Posso utilizzare un ciclo for of oppure un for Each per iterare gli oggetti;
 3. Salvo in tre variabili immagine, titolo e testo richiamando l'oggetto stesso e tramite la dot notation richiamo la chiave che mi restituirà il valore;
 4. tramite template literals, inserisco la stringa che stampa ad ogni iterazione le immagini e i dati richiesti;
-5. 
+5. Aggiungo e tolgo opportunamente la classe hide da titolo e testo;
 
 */
 
@@ -57,7 +57,7 @@ const buttonLeftRef = document.querySelector(".up");
 const buttonRightRef = document.querySelector(".down");
 const itemRef = document.getElementsByClassName("item");
 const thumbRef = document.getElementsByClassName("thumb");
-
+const infoRef = document.getElementsByClassName("info");
 /*
 const images = [
   "assets/img/01.webp",
@@ -80,7 +80,7 @@ images.forEach((hero) => {
   console.log(info);
   itemsSliderRef.innerHTML += `
 <img class="item hide" src="assets/${img}" alt="">
-                    <div class="info">
+                    <div class="info hide">
                         <h2 id="'title">${title}</h2>
                         <p id="text">${info}</p>
                     </div>`;
@@ -98,16 +98,19 @@ for (let i = 0; i < images.length; i++) {
 */
 
 itemRef[0].classList.remove("hide");
+infoRef[0].classList.remove("hide");
 thumbRef[0].classList.add("active");
 
 let counter = 0;
 
 buttonRightRef.addEventListener("click", function () {
   itemRef[counter].classList.add("hide");
+  infoRef[counter].classList.add("hide");
   thumbRef[counter].classList.remove("active");
   counter++;
 
   itemRef[counter].classList.remove("hide");
+  infoRef[counter].classList.remove("hide");
   thumbRef[counter].classList.add("active");
 
   buttonLeftRef.classList.remove("hide");
@@ -119,10 +122,12 @@ buttonRightRef.addEventListener("click", function () {
 
 buttonLeftRef.addEventListener("click", function () {
   itemRef[counter].classList.add("hide");
+  infoRef[counter].classList.add("hide");
   thumbRef[counter].classList.remove("active");
   counter--;
 
   itemRef[counter].classList.remove("hide");
+  infoRef[counter].classList.remove("hide");
   thumbRef[counter].classList.add("active");
 
   buttonRightRef.classList.remove("hide");
