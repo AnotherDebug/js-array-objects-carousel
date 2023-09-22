@@ -101,7 +101,13 @@ itemRef[0].classList.remove("hide");
 infoRef[0].classList.remove("hide");
 thumbRef[0].classList.add("active");
 
+const startSlide = setInterval(forwardClick, 1000);
+setTimeout(function() {
+  clearInterval(startSlide);
+}, 4000);
+
 let counter = 0;
+
 
 buttonRightRef.addEventListener("click", forwardClick);
 buttonLeftRef.addEventListener("click", backwardClick);
@@ -110,13 +116,15 @@ buttonLeftRef.addEventListener("click", backwardClick);
 
 
 
+  
 
 function forwardClick() {
+
   itemRef[counter].classList.add("hide");
   infoRef[counter].classList.add("hide");
   thumbRef[counter].classList.remove("active");
   counter++;
-
+ 
   itemRef[counter].classList.remove("hide");
   infoRef[counter].classList.remove("hide");
   thumbRef[counter].classList.add("active");
@@ -126,6 +134,7 @@ function forwardClick() {
   if (counter === images.length - 1) {
     buttonRightRef.classList.add("hide");
   }
+
 };
 
 function backwardClick() {
