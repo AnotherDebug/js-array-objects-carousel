@@ -103,7 +103,15 @@ thumbRef[0].classList.add("active");
 
 let counter = 0;
 
-buttonRightRef.addEventListener("click", function () {
+buttonRightRef.addEventListener("click", forwardClick);
+buttonLeftRef.addEventListener("click", backwardClick);
+
+
+
+
+
+
+function forwardClick() {
   itemRef[counter].classList.add("hide");
   infoRef[counter].classList.add("hide");
   thumbRef[counter].classList.remove("active");
@@ -118,9 +126,9 @@ buttonRightRef.addEventListener("click", function () {
   if (counter === images.length - 1) {
     buttonRightRef.classList.add("hide");
   }
-});
+};
 
-buttonLeftRef.addEventListener("click", function () {
+function backwardClick() {
   itemRef[counter].classList.add("hide");
   infoRef[counter].classList.add("hide");
   thumbRef[counter].classList.remove("active");
@@ -135,4 +143,4 @@ buttonLeftRef.addEventListener("click", function () {
   if (counter === 0) {
     buttonLeftRef.classList.add("hide");
   }
-});
+};
